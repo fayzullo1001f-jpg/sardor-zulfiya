@@ -2,7 +2,7 @@ import React, {useEffect, useState, useRef, useMemo} from "react";
 import {motion} from "framer-motion";
 import "./App.css";
 
-import musicFile from "./music/azizam.m4a";
+import musicFile from "./music/asad.mp3";
 
 import play from "./img/circle-play-regular-full.svg";
 import pause from "./img/circle-pause-regular-full.svg";
