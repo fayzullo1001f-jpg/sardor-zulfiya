@@ -372,6 +372,8 @@ button:hover {
 }
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
+
 .intro {
   position: fixed;
   inset: 0;
@@ -385,67 +387,85 @@ button:hover {
   overflow: hidden;
   color: white;
 
-  background:
-          radial-gradient(circle at top, rgba(255,255,255,0.2), transparent 40%),
-          linear-gradient(
-                  135deg,
-                  #ffcad4 0%,
-                  #f4acb7 30%,
-                  #ff8fab 60%,
-                  #ffc2d1 100%
-          );
+  background: linear-gradient(
+          135deg,
+          #ffc2d1,
+          #ffb3c6,
+          #ffdbe6
+  );
 
-  background-size: 400% 400%;
-  animation: gradientMove 10s ease infinite;
+  animation: bgMove 8s ease-in-out infinite alternate;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
+@keyframes bgMove {
+  from {
+    filter: hue-rotate(0deg);
   }
 
-  50% {
-    background-position: 100% 50%;
+  to {
+    filter: hue-rotate(15deg);
   }
+}
 
-  100% {
-    background-position: 0% 50%;
-  }
+.intro::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.25);
+
+  filter: blur(20px);
 }
 
 .intro h1 {
+  position: relative;
+  z-index: 2;
+
   font-family: 'Great Vibes', cursive;
 
-  font-size: 72px;
+  font-size: 68px;
   font-weight: 400;
 
-  letter-spacing: 4px;
   line-height: 1.1;
-
-  color: white;
+  letter-spacing: 3px;
 
   margin: 0;
 
+  color: white;
+
   text-shadow:
-          0 4px 15px rgba(0,0,0,0.15);
+          0 3px 10px rgba(0,0,0,0.12);
 }
 
 .intro span {
-  font-size: 38px;
-  margin: 10px 0;
-  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+
+  font-size: 34px;
+
+  margin: 8px 0;
+
+  color: #fff;
 }
 
 .intro p {
+  position: relative;
+  z-index: 2;
+
   font-family: 'Montserrat', sans-serif;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
 
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   text-transform: uppercase;
 
-  margin-top: 20px;
+  margin-top: 16px;
 
   opacity: 0.9;
 }
