@@ -15,7 +15,7 @@ import bride from "./img/bride-and-groom-on-the-background-of-a-fairy-tale-fores
 
 import brides from "./img/bride-and-groom-on-the-background-of-a-fairy-tale-forest-royal-wedding-concept-the-groom-embraces-the-bride-tenderness-and-calmness-portrait-photo.jpg";
 
-import cake from "./img/fbae6c59ca025e648f431cb1442ceb7c7ef52519.webp";
+import cake from "./img/cake-cutting-tradition-wedding-planning-yacht-charter-nyc.jpg";
 
 function App() {
     const [timeLeft, setTimeLeft] = useState("");
@@ -109,82 +109,96 @@ function App() {
                         className="intro"
                         initial={{ opacity: 1 }}
                         exit={{
-                            opacity: 0,
-                            scale: 1.1
-                        }}
-                        animate={{
-                            scale: [1, 1.05, 1]
-                        }}
-                        transition={{
-                            duration: 4
+                            opacity: 0
                         }}
                     >
+                        {/* BACKGROUND LIGHTS */}
+                        <div className="intro_blur blur1"></div>
+                        <div className="intro_blur blur2"></div>
+
+                        {/* CARD */}
                         <motion.div
-                            className="intro_overlay"
-                            animate={{
-                                opacity: [0.3, 0.5, 0.3]
-                            }}
-                            transition={{
-                                repeat: Infinity,
-                                duration: 3
-                            }}
-                        />
-
-                        <motion.h1
+                            className="intro_box"
                             initial={{
                                 opacity: 0,
                                 y: 50,
-                                letterSpacing: "20px"
+                                scale: 0.9
                             }}
                             animate={{
                                 opacity: 1,
                                 y: 0,
-                                letterSpacing: "6px"
+                                scale: 1
                             }}
                             transition={{
-                                duration: 1.5
+                                duration: 1
                             }}
                         >
-                            Sardor
-                        </motion.h1>
+                            <motion.p
+                                className="intro_top"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.3 }}
+                            >
+                                To'yga Taklifnoma
+                            </motion.p>
 
-                        <motion.span
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 1 }}
-                        >
-                            &
-                        </motion.span>
+                            <motion.h1
+                                initial={{
+                                    opacity: 0,
+                                    letterSpacing: "20px"
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                    letterSpacing: "5px"
+                                }}
+                                transition={{
+                                    duration: 1.2
+                                }}
+                            >
+                                Sardor
+                            </motion.h1>
 
-                        <motion.h1
-                            initial={{
-                                opacity: 0,
-                                y: 50,
-                                letterSpacing: "20px"
-                            }}
-                            animate={{
-                                opacity: 1,
-                                y: 0,
-                                letterSpacing: "6px"
-                            }}
-                            transition={{
-                                duration: 1.5,
-                                delay: 0.3
-                            }}
-                        >
-                            Zulfiya
-                        </motion.h1>
+                            <motion.span
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.8 }}
+                            >
+                                &
+                            </motion.span>
 
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                delay: 1.5
-                            }}
-                        >
-                            To'yga taklifnoma
+                            <motion.h1
+                                initial={{
+                                    opacity: 0,
+                                    letterSpacing: "20px"
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                    letterSpacing: "5px"
+                                }}
+                                transition={{
+                                    duration: 1.2,
+                                    delay: 0.2
+                                }}
+                            >
+                                Zulfiya
+                            </motion.h1>
 
-                        </motion.p>
+                            <motion.div
+                                className="intro_line"
+                                initial={{ width: 0 }}
+                                animate={{ width: "120px" }}
+                                transition={{ delay: 1.2, duration: 1 }}
+                            />
+
+                            <motion.p
+                                className="intro_bottom"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 1.5 }}
+                            >
+                                01 • AUGUST • 2026
+                            </motion.p>
+                        </motion.div>
                     </motion.div>
                 ) : (
                     <div className="app">
